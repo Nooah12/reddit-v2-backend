@@ -1,7 +1,8 @@
+// handle HTTP requests
 import { Router, type Request, type Response } from 'express'
 import { isValidObjectId, ObjectId } from 'mongoose'
 import { Post } from '../models/post'
-import { authenticate } from '../middlewares/authenticate'
+import { authenticate } from '../middleware/authenticate'
 
 type AuthorWithUsername = {
   _id: ObjectId

@@ -1,5 +1,5 @@
 import { Router, type Request, type Response } from "express"
-import {authenticate} from '../middlewares/authenticate'
+import {authenticate} from '../middleware/authenticate'
 import { User } from "../models/user"
 
 const getProfile = async (req: Request, res: Response) => {
