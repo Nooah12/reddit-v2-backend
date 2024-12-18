@@ -19,7 +19,7 @@ const commentSchema = new Schema(
             ref: 'User', // samma som User i user.ts
             required: true
         },
-        post: {
+        postId: {
             type: Schema.Types.ObjectId,
             ref: 'Post',
             required: true
