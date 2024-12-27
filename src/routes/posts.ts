@@ -34,7 +34,7 @@ const getPost = async (req: Request, res: Response) => {
   try {
     const { id } = req.params
 
-    if (!isValidObjectId(id)) { // tydligare error
+    if (!isValidObjectId(id)) {
         res.status(400).json({ message: 'Invalid post id' })
         return
     }

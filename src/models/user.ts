@@ -32,17 +32,16 @@ UserSchema.pre('save', async function (next) {
     }
 
     try {
-        const hashedPassword = await bcrypt.hash(this.password, 10) // krypterar flera gånger, extra säkert för pw om man t.ex har samma pw 
+        const hashedPassword = await bcrypt.hash(this.password, 10) 
         this.password = hashedPassword
 
         next()
     } catch (error) { 
-        if (error instanceof MongooseError) { // skicka vidare error till auth.ts ?
+        if (error instanceof MongooseError) {
             next(error)
         }
         throw error
     }
 })
 
-// model lite som en tabell-ish (post, user etc)
 export const User = model<Tuser>('User', UserSchema)

@@ -20,8 +20,3 @@ mongoose.connect(process.env.DB_URL!).then(() => {
         console.log(`Server is running on http://localhost:${port}`)
     })
 })
-
-/* app.listen('8080', () => {
-    console.log('Server is running on http://localhost:8080')
-})
- */
