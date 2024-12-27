@@ -8,7 +8,7 @@ type Tuser = Document & {
     updatedAt: Date
 }
 
-const UserSchema = new Schema({ // schema är en klass?
+const UserSchema = new Schema({
     username: {
         type: String,
         required: true,

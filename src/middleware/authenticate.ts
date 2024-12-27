@@ -19,7 +19,7 @@ export const authenticate = async (
     // check if user is logged in
     jwt.verify(token, process.env.JWT_SECRET!, async (error, decodedToken) => {
         if(error || !decodedToken || typeof decodedToken === 'string' || !(await User.exists({_id: decodedToken.userId}))){
-            res.status(401).json({ message: 'unauthenticated' })
+            res.status(401).json({ message: 'Unauthenticated' })
             return 
         }
         req.userId = decodedToken.userId
